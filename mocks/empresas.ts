@@ -1,4 +1,4 @@
-import { categorias } from './categorias';
+import { categorias } from '../mock/categorias';
 
 export interface Empresa {
   id: string;
