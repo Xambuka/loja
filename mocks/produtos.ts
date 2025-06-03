@@ -8,6 +8,9 @@ export interface Produto {
   categoriaId: string;
   destaque: boolean;
   disponivel: boolean;
+  /** ✅ Novas propriedades opcionais */
+  promocao?: boolean; // true = está em promoção
+  percentualDesconto?: number; // Ex: 10 para 10% OFF
 }
 
 export interface CategoriaProduto {
