@@ -11,7 +11,7 @@ import { getAnunciosAtivos } from '../mocks/anuncios';
 
 export default function Home() {
   const categoriasDestaque = categorias.slice(0, 4);
-  const empresasDestaque = getEmpresasDestaque();
+  //const empresasDestaque = getEmpresasDestaque();
   //const empresasDestaque: Empresa[] = getEmpresasDestaque();
   const produtosDestaque = getProdutosDestaque("1");
   const anunciosDestaque = getAnunciosAtivos();
