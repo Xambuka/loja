@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Empresa } from '../mocks/empresas';
-import { Empresa } from '../mocks/empresas';
+//import type { Empresa } from '../mocks/empresas';
+//import { Empresa } from '../mocks/empresas';
 import { getMediaAvaliacoesEmpresa } from '../mocks/avaliacoes';
-import { verificarHorarioFuncionamento } from '../mocks/empresas';
+//import { verificarHorarioFuncionamento } from '../mocks/empresas';
 import { categorias } from '../mocks/categorias';
 
 interface EmpresaCardProps {
