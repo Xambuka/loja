@@ -33,6 +33,7 @@ export interface Empresa {
   aberto: boolean;
   destaque: boolean;
   slug: string;
+  imagem?: string;
 }
 
 export const empresas: Empresa[] = [
