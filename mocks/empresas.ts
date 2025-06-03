@@ -1,0 +1,248 @@
+import { categorias } from './categorias';
+
+export interface Empresa {
+  id: string;
+  nome: string;
+  descricao: string;
+  logo: string;
+  capa: string;
+  telefone: string;
+  whatsapp?: string;
+  instagram?: string;
+  facebook?: string;
+  categoriaId: string;
+  endereco: {
+    rua: string;
+    numero: string;
+    bairro: string;
+    cidade: string;
+    estado: string;
+    cep: string;
+  };
+  status: 'ativo' | 'inativo';
+  plano: 'gratuito' | 'basico' | 'premium';
+  horarioFuncionamento: {
+    segunda?: string;
+    terca?: string;
+    quarta?: string;
+    quinta?: string;
+    sexta?: string;
+    sabado?: string;
+    domingo?: string;
+  };
+  aberto: boolean;
+  destaque: boolean;
+  slug: string;
+}
+
+export const empresas: Empresa[] = [
+  {
+    id: '1',
+    nome: 'Restaurante Sabor Caseiro',
+    descricao: 'Comida caseira com sabor de mãe. Pratos executivos e à la carte com ingredientes frescos e selecionados.',
+    logo: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=128&h=128&fit=crop&auto=format',
+    capa: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=400&fit=crop&auto=format',
+    telefone: '(11) 3456-7890',
+    whatsapp: '(11) 98765-4321',
+    instagram: '@saborCaseiro',
+    categoriaId: '1', // Restaurantes
+    endereco: {
+      rua: 'Rua das Flores',
+      numero: '123',
+      bairro: 'Centro',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      cep: '01234-567'
+    },
+    status: 'ativo',
+    plano: 'premium',
+    horarioFuncionamento: {
+      segunda: '11:00 - 22:00',
+      terca: '11:00 - 22:00',
+      quarta: '11:00 - 22:00',
+      quinta: '11:00 - 22:00',
+      sexta: '11:00 - 23:00',
+      sabado: '11:00 - 23:00',
+      domingo: '11:00 - 16:00'
+    },
+    aberto: true,
+    destaque: true,
+    slug: 'restaurante-sabor-caseiro'
+  },
+  {
+    id: '2',
+    nome: 'Pizzaria Bella Napoli',
+    descricao: 'Pizzas artesanais com massa fermentada naturalmente e ingredientes importados da Itália.',
+    logo: 'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?w=128&h=128&fit=crop&auto=format',
+    capa: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&h=400&fit=crop&auto=format',
+    telefone: '(11) 2345-6789',
+    whatsapp: '(11) 98765-4322',
+    instagram: '@bellaNapoli',
+    categoriaId: '3', // Pizzarias
+    endereco: {
+      rua: 'Avenida Paulista',
+      numero: '1500',
+      bairro: 'Bela Vista',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      cep: '01310-200'
+    },
+    status: 'ativo',
+    plano: 'basico',
+    horarioFuncionamento: {
+      segunda: 'Fechado',
+      terca: '18:00 - 23:00',
+      quarta: '18:00 - 23:00',
+      quinta: '18:00 - 23:00',
+      sexta: '18:00 - 00:00',
+      sabado: '18:00 - 00:00',
+      domingo: '18:00 - 23:00'
+    },
+    aberto: true,
+    destaque: false,
+    slug: 'pizzaria-bella-napoli'
+  },
+  {
+    id: '3',
+    nome: 'Café Aroma',
+    descricao: 'Cafeteria especializada em grãos selecionados. Ambiente aconchegante para trabalhar e relaxar.',
+    logo: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=128&h=128&fit=crop&auto=format',
+    capa: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&h=400&fit=crop&auto=format',
+    telefone: '(11) 3456-7891',
+    instagram: '@cafeAroma',
+    categoriaId: '4', // Cafeterias
+    endereco: {
+      rua: 'Rua Augusta',
+      numero: '789',
+      bairro: 'Consolação',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      cep: '01305-000'
+    },
+    status: 'ativo',
+    plano: 'gratuito',
+    horarioFuncionamento: {
+      segunda: '08:00 - 20:00',
+      terca: '08:00 - 20:00',
+      quarta: '08:00 - 20:00',
+      quinta: '08:00 - 20:00',
+      sexta: '08:00 - 20:00',
+      sabado: '09:00 - 19:00',
+      domingo: '09:00 - 18:00'
+    },
+    aberto: true,
+    destaque: false,
+    slug: 'cafe-aroma'
+  },
+  {
+    id: '4',
+    nome: 'Mercado Fresco',
+    descricao: 'Minimercado com produtos orgânicos, naturais e sem conservantes. Entregas rápidas.',
+    logo: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=128&h=128&fit=crop&auto=format',
+    capa: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=400&fit=crop&auto=format',
+    telefone: '(11) 3456-7892',
+    whatsapp: '(11) 98765-4323',
+    categoriaId: '5', // Mercados
+    endereco: {
+      rua: 'Rua Oscar Freire',
+      numero: '1000',
+      bairro: 'Jardins',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      cep: '01426-001'
+    },
+    status: 'ativo',
+    plano: 'premium',
+    horarioFuncionamento: {
+      segunda: '08:00 - 22:00',
+      terca: '08:00 - 22:00',
+      quarta: '08:00 - 22:00',
+      quinta: '08:00 - 22:00',
+      sexta: '08:00 - 22:00',
+      sabado: '08:00 - 22:00',
+      domingo: '08:00 - 20:00'
+    },
+    aberto: true,
+    destaque: true,
+    slug: 'mercado-fresco'
+  },
+  {
+    id: '5',
+    nome: 'Hamburgueria Artesanal',
+    descricao: 'Hambúrgueres artesanais com blend exclusivo e ingredientes selecionados. Ambiente descontraído.',
+    logo: 'https://images.unsplash.com/photo-1586816001966-79b736744398?w=128&h=128&fit=crop&auto=format',
+    capa: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&h=400&fit=crop&auto=format',
+    telefone: '(11) 3456-7893',
+    whatsapp: '(11) 98765-4324',
+    instagram: '@hamburgueriaArtesanal',
+    facebook: 'hamburgueriaArtesanal',
+    categoriaId: '2', // Lanchonetes
+    endereco: {
+      rua: 'Rua dos Pinheiros',
+      numero: '500',
+      bairro: 'Pinheiros',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      cep: '05422-000'
+    },
+    status: 'ativo',
+    plano: 'basico',
+    horarioFuncionamento: {
+      segunda: 'Fechado',
+      terca: '18:00 - 23:00',
+      quarta: '18:00 - 23:00',
+      quinta: '18:00 - 23:00',
+      sexta: '18:00 - 00:00',
+      sabado: '18:00 - 00:00',
+      domingo: '18:00 - 23:00'
+    },
+    aberto: false,
+    destaque: false,
+    slug: 'hamburgueria-artesanal'
+  },
+  {
+    id: '6',
+    nome: 'Doceria Doce Sabor',
+    descricao: 'Doces artesanais, bolos personalizados e sobremesas para festas e eventos.',
+    logo: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=128&h=128&fit=crop&auto=format',
+    capa: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1200&h=400&fit=crop&auto=format',
+    telefone: '(11) 3456-7894',
+    whatsapp: '(11) 98765-4325',
+    instagram: '@doceSabor',
+    categoriaId: '6', // Docerias
+    endereco: {
+      rua: 'Rua Fradique Coutinho',
+      numero: '300',
+      bairro: 'Vila Madalena',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      cep: '05416-000'
+    },
+    status: 'ativo',
+    plano: 'gratuito',
+    horarioFuncionamento: {
+      segunda: '10:00 - 19:00',
+      terca: '10:00 - 19:00',
+      quarta: '10:00 - 19:00',
+      quinta: '10:00 - 19:00',
+      sexta: '10:00 - 19:00',
+      sabado: '10:00 - 19:00',
+      domingo: 'Fechado'
+    },
+    aberto: true,
+    destaque: false,
+    slug: 'doceria-doce-sabor'
+  },
+];
+
+export function getEmpresasByCategoria(categoriaId: string): Empresa[] {
+  return empresas.filter(empresa => empresa.categoriaId === categoriaId && empresa.status === 'ativo');
+}
+
+export function getEmpresasDestaque(): Empresa[] {
+  return empresas.filter(empresa => empresa.destaque && empresa.status === 'ativo');
+}
+
+export function getEmpresaBySlug(slug: string): Empresa | undefined {
+  return empresas.find(empresa => empresa.slug === slug);
+}
