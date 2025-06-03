@@ -3,7 +3,7 @@ import HeroBanner from '../components/HeroBanner';
 import CategoriaCard from '../components/CategoriaCard';
 import type { Empresa } from '../mocks/empresas';
 import EmpresaCard from '../components/EmpresaCard';
-//import { getEmpresasDestaque } from '../mocks/empresas';
+import { getEmpresasFiltradas } from '../mocks/empresas';
 import ProdutoCard from '../components/ProdutoCard';
 import { categorias } from '../mocks/categorias';
 import { getProdutosDestaque } from '../mocks/produtos';
@@ -11,8 +11,7 @@ import { getAnunciosAtivos } from '../mocks/anuncios';
 
 export default function Home() {
   const categoriasDestaque = categorias.slice(0, 4);
-  //const empresasDestaque = getEmpresasDestaque();
-  //const empresasDestaque: Empresa[] = getEmpresasDestaque();
+  const empresasDestaque = getEmpresasFiltradas({ destaque: true });
   const produtosDestaque = getProdutosDestaque("1");
   const anunciosDestaque = getAnunciosAtivos();
 
