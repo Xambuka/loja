@@ -8,7 +8,7 @@ import { categorias } from '../mocks/categorias';
 
 interface EmpresaCardProps {
   empresa: Empresa;
-  destacado?: boolean;
+  destaque?: boolean;
 }
 
 export default function EmpresaCard({ empresa, destaque }: EmpresaCardProps) {
