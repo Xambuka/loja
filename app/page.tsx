@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import HeroBanner from '../components/HeroBanner';
 import CategoriaCard from '../components/CategoriaCard';
-import type { Empresa } from '../mocks/empresas';
-import EmpresaCard from '../components/EmpresaCard';
 import { getEmpresasFiltradas } from '../mocks/empresas';
+import EmpresaCard from '../components/EmpresaCard';
+import type { Empresa } from '../mocks/empresas';
 import ProdutoCard from '../components/ProdutoCard';
 import { categorias } from '../mocks/categorias';
 import { getProdutosDestaque } from '../mocks/produtos';
