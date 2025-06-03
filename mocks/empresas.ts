@@ -35,6 +35,7 @@ export interface Empresa {
   slug: string;
   imagem?: string;
   tempoEntrega?: string; // ✅ Adicionado
+  taxaEntrega?: number; // Exemplo: 5.99 para R$ 5,99, ou 0 para grátis
 }
 
 export const empresas: Empresa[] = [
