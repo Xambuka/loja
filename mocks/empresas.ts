@@ -34,6 +34,7 @@ export interface Empresa {
   destaque: boolean;
   slug: string;
   imagem?: string;
+  tempoEntrega?: string; // ✅ Adicionado
 }
 
 export const empresas: Empresa[] = [
@@ -46,7 +47,7 @@ export const empresas: Empresa[] = [
     telefone: '(11) 3456-7890',
     whatsapp: '(11) 98765-4321',
     instagram: '@saborCaseiro',
-    categoriaId: '1', // Restaurantes
+    categoriaId: '1',
     endereco: {
       rua: 'Rua das Flores',
       numero: '123',
@@ -68,7 +69,8 @@ export const empresas: Empresa[] = [
     },
     aberto: true,
     destaque: true,
-    slug: 'restaurante-sabor-caseiro'
+    slug: 'restaurante-sabor-caseiro',
+    tempoEntrega: '30-40 min'
   },
   {
     id: '2',
@@ -79,7 +81,7 @@ export const empresas: Empresa[] = [
     telefone: '(11) 2345-6789',
     whatsapp: '(11) 98765-4322',
     instagram: '@bellaNapoli',
-    categoriaId: '3', // Pizzarias
+    categoriaId: '3',
     endereco: {
       rua: 'Avenida Paulista',
       numero: '1500',
@@ -101,7 +103,8 @@ export const empresas: Empresa[] = [
     },
     aberto: true,
     destaque: false,
-    slug: 'pizzaria-bella-napoli'
+    slug: 'pizzaria-bella-napoli',
+    tempoEntrega: '25-35 min'
   },
   {
     id: '3',
@@ -111,7 +114,7 @@ export const empresas: Empresa[] = [
     capa: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&h=400&fit=crop&auto=format',
     telefone: '(11) 3456-7891',
     instagram: '@cafeAroma',
-    categoriaId: '4', // Cafeterias
+    categoriaId: '4',
     endereco: {
       rua: 'Rua Augusta',
       numero: '789',
@@ -133,7 +136,8 @@ export const empresas: Empresa[] = [
     },
     aberto: true,
     destaque: false,
-    slug: 'cafe-aroma'
+    slug: 'cafe-aroma',
+    tempoEntrega: '15-20 min'
   },
   {
     id: '4',
@@ -143,7 +147,7 @@ export const empresas: Empresa[] = [
     capa: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=400&fit=crop&auto=format',
     telefone: '(11) 3456-7892',
     whatsapp: '(11) 98765-4323',
-    categoriaId: '5', // Mercados
+    categoriaId: '5',
     endereco: {
       rua: 'Rua Oscar Freire',
       numero: '1000',
@@ -165,7 +169,8 @@ export const empresas: Empresa[] = [
     },
     aberto: true,
     destaque: true,
-    slug: 'mercado-fresco'
+    slug: 'mercado-fresco',
+    tempoEntrega: '40-60 min'
   },
   {
     id: '5',
@@ -177,7 +182,7 @@ export const empresas: Empresa[] = [
     whatsapp: '(11) 98765-4324',
     instagram: '@hamburgueriaArtesanal',
     facebook: 'hamburgueriaArtesanal',
-    categoriaId: '2', // Lanchonetes
+    categoriaId: '2',
     endereco: {
       rua: 'Rua dos Pinheiros',
       numero: '500',
@@ -199,7 +204,8 @@ export const empresas: Empresa[] = [
     },
     aberto: false,
     destaque: false,
-    slug: 'hamburgueria-artesanal'
+    slug: 'hamburgueria-artesanal',
+    tempoEntrega: '20-30 min'
   },
   {
     id: '6',
@@ -210,7 +216,7 @@ export const empresas: Empresa[] = [
     telefone: '(11) 3456-7894',
     whatsapp: '(11) 98765-4325',
     instagram: '@doceSabor',
-    categoriaId: '6', // Docerias
+    categoriaId: '6',
     endereco: {
       rua: 'Rua Fradique Coutinho',
       numero: '300',
@@ -232,8 +238,9 @@ export const empresas: Empresa[] = [
     },
     aberto: true,
     destaque: false,
-    slug: 'doceria-doce-sabor'
-  },
+    slug: 'doceria-doce-sabor',
+    tempoEntrega: '15-25 min'
+  }
 ];
 
 export function getEmpresasByCategoria(categoriaId: string): Empresa[] {
