@@ -281,8 +281,6 @@ export function verificarHorarioFuncionamento(empresaId: string): boolean {
   return abertoAgora;
 }
 
-import { empresas, Empresa } from './empresas';
-
 /**
  * Retorna os dados de configuração de uma empresa pelo ID.
  */
