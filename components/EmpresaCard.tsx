@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Empresa } from '../mocks/empresas';
-//import { Empresa } from '../mocks/empresas';
+import { Empresa } from '../mocks/empresas';
 import { getMediaAvaliacoesEmpresa } from '../mocks/avaliacoes';
 import { verificarHorarioFuncionamento } from '../mocks/empresas';
 import { categorias } from '../mocks/categorias';
@@ -11,7 +11,7 @@ interface EmpresaCardProps {
   destacado?: boolean;
 }
 
-export default function EmpresaCard({ empresa, destacado = false }: EmpresaCardProps) {
+export default function EmpresaCard({ empresa, destaque = false }: EmpresaCardProps) {
   const mediaAvaliacoes = getMediaAvaliacoesEmpresa(empresa.id);
   const aberto = verificarHorarioFuncionamento(empresa.id);
 
